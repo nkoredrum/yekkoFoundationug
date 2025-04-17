@@ -11,12 +11,18 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="logo">Organization Name</a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Yekko Foundation Uganda Logo">
+                <div class="logo-text">
+                    <span>Yekko Foundation</span>
+                    <span>Uganda</span>
+                </div>
+            </a>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/projects.html">Projects</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -27,136 +33,81 @@
     </nav>
 
     <!-- Projects Hero Section -->
-    <header class="hero projects-hero">
+    <section class="projects-hero">
         <div class="container">
-            <h1>Our Projects</h1>
-            <p>Discover how we're making a difference through our initiatives</p>
-        </div>
-    </header>
-
-    <!-- Projects Filter -->
-    <section class="projects-filter">
-        <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="community">Community</button>
-                <button class="filter-btn" data-filter="education">Education</button>
-                <button class="filter-btn" data-filter="innovation">Innovation</button>
-            </div>
+            <h1>Our Healthcare Centers</h1>
+            <p>Providing quality healthcare services to communities in Masaka and surrounding districts</p>
         </div>
     </section>
 
     <!-- Projects Grid -->
-    <section class="projects-showcase">
+    <section class="projects-grid">
         <div class="container">
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="community">
-                    <img src="assets/images/project1.jpg" alt="Community Garden Initiative">
-                    <div class="project-content">
-                        <h3>Community Garden Initiative</h3>
-                        <p class="project-category">Community Development</p>
-                        <p class="project-description">Creating sustainable urban gardens to promote community engagement and food security.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
+            <div class="project-card">
+                <img src="assets/images/1744873923592.jpg" alt="Yekko Medical Centre">
+                <div class="project-content">
+                    <h3>Yekko Medical Centre</h3>
+                    <p>Our main medical facility providing comprehensive healthcare services including general medicine, pediatrics, and specialized care. Located in Masaka City, we serve patients from all seven districts.</p>
+                    <ul class="services-list">
+                        <li>General Medicine</li>
+                        <li>Pediatrics</li>
+                        <li>Specialized Care</li>
+                        <li>Emergency Services</li>
+                    </ul>
                 </div>
+            </div>
 
-                <!-- Project 2 -->
-                <div class="project-card" data-category="education">
-                    <img src="assets/images/project2.jpg" alt="Youth Education Program">
-                    <div class="project-content">
-                        <h3>Youth Education Program</h3>
-                        <p class="project-category">Education</p>
-                        <p class="project-description">Empowering young minds through innovative educational programs and mentorship.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
+            <div class="project-card">
+                <img src="assets/images/1744873923611.jpg" alt="Yekko Dental Clinic">
+                <div class="project-content">
+                    <h3>Yekko Dental Clinic</h3>
+                    <p>State-of-the-art dental facility offering comprehensive dental care services. Our experienced dental team provides both preventive and curative dental treatments.</p>
+                    <ul class="services-list">
+                        <li>Preventive Dentistry</li>
+                        <li>Restorative Care</li>
+                        <li>Orthodontics</li>
+                        <li>Emergency Dental Care</li>
+                    </ul>
                 </div>
+            </div>
 
-                <!-- Project 3 -->
-                <div class="project-card" data-category="innovation">
-                    <img src="assets/images/project3.jpg" alt="Tech Innovation Hub">
-                    <div class="project-content">
-                        <h3>Tech Innovation Hub</h3>
-                        <p class="project-category">Innovation</p>
-                        <p class="project-description">Fostering technological innovation and entrepreneurship in our community.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card" data-category="community">
-                    <img src="assets/images/project4.jpg" alt="Senior Care Program">
-                    <div class="project-content">
-                        <h3>Senior Care Program</h3>
-                        <p class="project-category">Community</p>
-                        <p class="project-description">Supporting elderly community members through care and social programs.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" data-category="education">
-                    <img src="assets/images/project5.jpg" alt="Digital Literacy Initiative">
-                    <div class="project-content">
-                        <h3>Digital Literacy Initiative</h3>
-                        <p class="project-category">Education</p>
-                        <p class="project-description">Bridging the digital divide through technology education and access.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" data-category="innovation">
-                    <img src="assets/images/project6.jpg" alt="Sustainable Energy Project">
-                    <div class="project-content">
-                        <h3>Sustainable Energy Project</h3>
-                        <p class="project-category">Innovation</p>
-                        <p class="project-description">Implementing renewable energy solutions in local communities.</p>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
+            <div class="project-card">
+                <img src="assets/images/1744873923509.jpg" alt="Yekko Eye Care Centre">
+                <div class="project-content">
+                    <h3>Yekko Eye Care Centre</h3>
+                    <p>Specialized eye care facility providing comprehensive vision care services. We offer diagnosis, treatment, and management of various eye conditions.</p>
+                    <ul class="services-list">
+                        <li>Vision Testing</li>
+                        <li>Eye Disease Treatment</li>
+                        <li>Surgical Procedures</li>
+                        <li>Vision Rehabilitation</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Impact -->
-    <section class="project-impact">
+    <!-- Impact Section -->
+    <section class="impact">
         <div class="container">
             <h2>Our Impact</h2>
             <div class="impact-grid">
-                <div class="impact-card">
-                    <i class="fas fa-users"></i>
-                    <h3>10,000+</h3>
-                    <p>People Reached</p>
+                <div class="impact-stat">
+                    <h3>7</h3>
+                    <p>Districts Served</p>
                 </div>
-                <div class="impact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>15</h3>
-                    <p>Communities Served</p>
+                <div class="impact-stat">
+                    <h3>3</h3>
+                    <p>Healthcare Centers</p>
                 </div>
-                <div class="impact-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>50+</h3>
-                    <p>Partners</p>
+                <div class="impact-stat">
+                    <h3>24/7</h3>
+                    <p>Emergency Care</p>
                 </div>
-                <div class="impact-card">
-                    <i class="fas fa-award"></i>
-                    <h3>25+</h3>
-                    <p>Awards Received</p>
+                <div class="impact-stat">
+                    <h3>100%</h3>
+                    <p>Quality Care</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Get Involved -->
-    <section class="get-involved">
-        <div class="container">
-            <h2>Get Involved</h2>
-            <p>Join us in making a difference. Whether through volunteering, partnerships, or donations, your support helps us create lasting change.</p>
-            <div class="involvement-options">
-                <a href="#" class="cta-button">Volunteer</a>
-                <a href="#" class="secondary-button">Partner With Us</a>
-                <a href="#" class="secondary-button">Donate</a>
             </div>
         </div>
     </section>
@@ -166,16 +117,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Organization Name</h3>
-                    <p>Making a difference through innovation and dedication.</p>
+                    <h3>Yekko Foundation Uganda</h3>
+                    <p>Making a difference through healthcare, education, and community empowerment.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/projects.html">Projects</a></li>
-                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -189,7 +140,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Organization Name. All rights reserved.</p>
+                <p>&copy; 2024 Yekko Foundation Uganda. All rights reserved.</p>
             </div>
         </div>
     </footer>
