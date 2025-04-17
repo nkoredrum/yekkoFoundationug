@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Yekko Foundation Uganda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Gallery specific styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            background: transparent;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Yekko Foundation Uganda Logo">
+                <div class="logo-text">
+                    <span>Yekko Foundation</span>
+                    <span>Uganda</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Logo Banner -->
+    <div class="gallery-logo-banner">
+        <div class="container">
+            <a href="index.html" class="gallery-logo">
+                <img src="assets/images/logo.jpg" alt="Yekko Foundation Uganda Logo">
+                <div class="gallery-logo-text">
+                    <span>Yekko Foundation</span>
+                    <span>Uganda</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Capturing moments of impact and progress in our healthcare centers</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="medical">Medical Centre</button>
+                <button class="filter-btn" data-filter="dental">Dental Clinic</button>
+                <button class="filter-btn" data-filter="eye">Eye Care Centre</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Medical Centre Images -->
+                <div class="gallery-item" data-category="medical">
+                    <img src="assets/images/Charity.jpg" alt="Yekko Medical Centre">
+                    <div class="gallery-caption">
+                        <h3>Yekko Medical Centre</h3>
+                        <p>Our main medical facility in Masaka City</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="medical">
+                    <img src="assets/images/Charity (2).jpg" alt="Medical Services">
+                    <div class="gallery-caption">
+                        <h3>Medical Services</h3>
+                        <p>Comprehensive healthcare services</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="medical">
+                    <img src="assets/images/Charity (3).jpg" alt="Patient Care">
+                    <div class="gallery-caption">
+                        <h3>Patient Care</h3>
+                        <p>Quality healthcare delivery</p>
+                    </div>
+                </div>
+                
+                <!-- Dental Clinic Images -->
+                <div class="gallery-item" data-category="dental">
+                    <img src="assets/images/yekkodental.jpg" alt="Yekko Dental Clinic">
+                    <div class="gallery-caption">
+                        <h3>Yekko Dental Clinic</h3>
+                        <p>State-of-the-art dental facility</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="dental">
+                    <img src="assets/images/Dental Camp at Divine Grace P-s.jpg" alt="Dental Camp">
+                    <div class="gallery-caption">
+                        <h3>Dental Camp</h3>
+                        <p>Dental services at Divine Grace Primary School</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="dental">
+                    <img src="assets/images/Dental Camp Kyotera.jpg" alt="Kyotera Dental Camp">
+                    <div class="gallery-caption">
+                        <h3>Kyotera Dental Camp</h3>
+                        <p>Bringing dental care to Kyotera</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="dental">
+                    <img src="assets/images/Kooki Dental Camp.jpg" alt="Kooki Dental Camp">
+                    <div class="gallery-caption">
+                        <h3>Kooki Dental Camp</h3>
+                        <p>Dental services in Kooki</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="dental">
+                    <img src="assets/images/Mutukula Dental Camp.jpg" alt="Mutukula Dental Camp">
+                    <div class="gallery-caption">
+                        <h3>Mutukula Dental Camp</h3>
+                        <p>Dental care outreach in Mutukula</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="dental">
+                    <img src="assets/images/Sembabule-dental Camp.jpg" alt="Sembabule Dental Camp">
+                    <div class="gallery-caption">
+                        <h3>Sembabule Dental Camp</h3>
+                        <p>Dental services in Sembabule</p>
+                    </div>
+                </div>
+                
+                <!-- Eye Care Centre Images -->
+                <div class="gallery-item" data-category="eye">
+                    <img src="assets/images/Eye care Camp.jpg" alt="Eye Care Camp">
+                    <div class="gallery-caption">
+                        <h3>Eye Care Camp</h3>
+                        <p>Comprehensive eye care services</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="eye">
+                    <img src="assets/images/Kyabakuza Eye camp.jpg" alt="Kyabakuza Eye Camp">
+                    <div class="gallery-caption">
+                        <h3>Kyabakuza Eye Camp</h3>
+                        <p>Eye care services in Kyabakuza</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="eye">
+                    <img src="assets/images/Kyotera Eye camp.jpg" alt="Kyotera Eye Camp">
+                    <div class="gallery-caption">
+                        <h3>Kyotera Eye Camp</h3>
+                        <p>Eye care outreach in Kyotera</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="eye">
+                    <img src="assets/images/Kooki Eye camp.jpg" alt="Kooki Eye Camp">
+                    <div class="gallery-caption">
+                        <h3>Kooki Eye Camp</h3>
+                        <p>Eye care services in Kooki</p>
+                    </div>
+                </div>
+                
+                <!-- Community Images -->
+                <div class="gallery-item" data-category="community">
+                    <img src="assets/images/Team @Campsite.jpg" alt="Team at Campsite">
+                    <div class="gallery-caption">
+                        <h3>Our Team</h3>
+                        <p>Dedicated healthcare professionals</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="community">
+                    <img src="assets/images/Oral Health Education.jpg" alt="Health Education">
+                    <div class="gallery-caption">
+                        <h3>Health Education</h3>
+                        <p>Promoting oral health awareness</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="community">
+                    <img src="assets/images/Charity (4).jpg" alt="Community Outreach">
+                    <div class="gallery-caption">
+                        <h3>Community Outreach</h3>
+                        <p>Making healthcare accessible</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="community">
+                    <img src="assets/images/Charity (5).jpg" alt="Healthcare Access">
+                    <div class="gallery-caption">
+                        <h3>Healthcare Access</h3>
+                        <p>Bringing services to communities</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="community">
+                    <img src="assets/images/Charity (6).jpg" alt="Community Impact">
+                    <div class="gallery-caption">
+                        <h3>Community Impact</h3>
+                        <p>Making a difference in people's lives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Yekko Foundation Uganda</h3>
+                    <p>Making a difference through healthcare, education, and community empowerment.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Yekko Foundation Uganda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Gallery Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
