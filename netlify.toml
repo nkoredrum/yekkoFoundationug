@@ -1,5 +1,5 @@
 [build]
-  publish = "WEB-"
+  publish = "."
   base = "."
 
 [[redirects]]
